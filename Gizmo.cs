@@ -14,6 +14,7 @@ public class Gizmo : MonoBehaviour
     public float raysLength = 1f;
 
     public bool rayForward = true;
+    public bool rayWorldForward;
 
     void OnDrawGizmos ()
     {
@@ -51,6 +52,11 @@ public class Gizmo : MonoBehaviour
 //          Gizmos.color = Color.green;
 //          Gizmos.DrawLine(transform.position, transform.position + transform.forward * raysLength);
         
+        }
+        if (rayWorldForward)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawRay(transform.position, Vector3.forward * raysLength / 2);
         }
     }
 

@@ -13,6 +13,7 @@ public class FollowTarget : MonoBehaviour
 	{
         Vector3 targetDir = target.position - transform.position;
         float distance = targetDir.magnitude;
+
         if (distance > minDinstance && distance < sensivity)
         {
             float step = speed * Time.deltaTime;
